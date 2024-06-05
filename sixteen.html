@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/736x/20/4c/3d/204c3d21934047091383b2e3bdc5685a.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .container{
+            background-color: aliceblue;
+            height: 360px;
+            width: 350px;
+            border-radius: 10px;
+            margin-left: 200px ;
+            margin-top: 50px;
+        }
+        .main{
+            text-align: center;
+            padding-top: 10px;
+        }
+        #input{
+            padding: 18px;
+            width: 250px;
+            margin-top: 30px;
+            border-radius: 8px;
+            border: 1px solid #ff2fff;
+            box-shadow: 1px 1px 5px black;
+        }
+        #submit{
+            margin-top: 30px;
+            padding: 12px;
+            background-color: #00d0ff;
+            border: none;
+            color: aliceblue;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .container button{
+            padding: 7px;
+            margin-top: 30px;
+            margin-left: 10px;
+            background-color: #ff9900;
+            border: none;
+            color: aliceblue;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <h1>Password Generator</h1>
+        <input type="text" id="input">
+        <br>
+        <button type="button" id="submit" onclick="generatePassword()">Generate Password</button>
+        <br>
+        <button type="button" onclick="generateNumberPassword()">Number</button>
+        <button type="button" onclick="generateUpperCasePassword()">UpperCase</button>
+        <button type="button" onclick="generateLowerCasePassword()">LowerCase</button>
+    </div>
+</div>
+<script>
+    function generatePassword(){
+        const length = 12;
+        const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            password += charset[randomIndex];
+        }
+        const input = document.getElementById("input");
+        input.value = password;
+    }
+
+    function generateNumberPassword() {
+        const length = 12;
+        const charset = "1234567890";
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            password += charset[randomIndex];
+        }
+        const input = document.getElementById("input");
+        input.value = password;
+    }
+
+    function generateUpperCasePassword() {
+        const length = 12;
+        const charset = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            password += charset[randomIndex];
+        }
+        const input = document.getElementById("input");
+        input.value = password;
+    }
+
+    function generateLowerCasePassword() {
+        const length = 12;
+        const charset = "abcdefghijklmnopqrstuvwxyz";
+        let password = "";
+        for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            password += charset[randomIndex];
+        }
+        const input = document.getElementById("input");
+        input.value = password;
+    }
+</script>
+</body>
+</html>

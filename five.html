@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/736x/20/4c/3d/204c3d21934047091383b2e3bdc5685a.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .card{
+            background-color: #ffffff;
+            height: 350px;
+            width: 380px;
+            padding-left: 30px ;
+            padding-top: 10px;
+        }
+        .card h1{
+            text-align: center;
+        }
+        .card input{
+            padding: 8px;
+            width: 350px;
+            margin: 10px;
+        }
+        .card label{
+            font-weight: bold;
+            margin: 10px;
+        }
+        .card button{
+            padding: 8px;
+            width: 350px;
+            margin-left: 10px;
+            color: aliceblue;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #007bff;
+        }
+        .bm{
+            margin-left: 70px;
+            font-weight: bold;
+        }
+        #result{
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>BMI Calculator</h1>
+            <label for="">Weight (kg):</label>
+            <br>
+            <input type="number" id="weight" placeholder="Enter weight in kg">
+            <br>
+
+            <label for="">Height (cm):</label>
+            <br>
+            <input type="number" id="height" placeholder="Enter height in cm">
+            <br>
+            <button  ondblclick="calculateBMI()">Calculate BMI</button>
+        
+        <div class="bm">
+            <h2>Your BMI is: <span id="result">--</span></h2>
+        </div>
+    </div>
+</div>
+<script>
+    function calculateBMI(){
+         var weight = document.getElementById("weight").value
+         var height = document.getElementById("height").value
+
+         if (weight && height) {
+            height = height / 100;
+            var bmi = (weight / (height * height)).toFixed(2);
+            document.getElementById("result").innerText = bmi;
+        }else{
+            alert("please enter weight and height");
+}
+    }
+</script>
+</body>
+</html>

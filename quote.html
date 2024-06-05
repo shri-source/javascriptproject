@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/736x/20/4c/3d/204c3d21934047091383b2e3bdc5685a.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .container{
+            background-color: aliceblue;
+            height: 300px;
+            width: 390px;
+            padding: 20px;
+            padding-top: 10px;
+            border-radius: 10px;
+            margin: 100px auto;
+        }
+        .container h1{
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .container input{
+            margin-left: 10px;
+            width: 330px;
+            padding: 18px;
+            margin-top: 30px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        #demo{
+            width: 120px;
+            padding: 8px;
+            margin-left: 120px;
+            background-color: orange;
+            color: aliceblue;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quote Generator</h1>
+        <input type="text" id="quote">
+        <br>
+        <input id="demo" onclick="generateQuote()" type="button" value="Generate quote">
+    </div>
+    <script>
+        function generateQuote(){
+            const quotes = [
+                "' Well done is better than well said.'",
+                " 'Spread love everywhere you go'",
+                "'The only thing we have to fear is fear itself.'' ",
+                "'The best way to predict the future is to create it.'",
+                "'Do not watch the clock. Do what it does. Keep going.'"
+            ];
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            const quote = quotes[randomIndex];
+            const input = document.getElementById("quote");
+            input.value = quote;
+        }
+    </script>
+</body>
+</html>

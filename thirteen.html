@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(https://i.pinimg.com/736x/20/4c/3d/204c3d21934047091383b2e3bdc5685a.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100vh;
+        }
+        .container{
+            background-color: aliceblue;
+            height: 430px;
+            width: 350px;
+            margin: 200px;
+            text-align: center;
+            border-radius: 25px;
+        }
+        #currency-one{
+            padding: 10px;
+            width: 300px;
+            margin: 20px 0px;
+        }
+        #currency-two{
+            padding: 10px;
+            width: 300px;
+            margin: 20px 0px;
+        }
+        .container input{
+            padding: 10px;
+            width: 275px;
+        }
+        #swap{
+            padding: 9px;
+            width: 100px;
+            margin-top: 20px ;
+            margin-bottom: 20px;
+            background-color: #00aeff;
+            color: aliceblue;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+        }
+        .main h2{
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+        <h2>Currency convertor</h2>
+            <select name="" id="currency-one">
+                <option value="AED">AED</option>
+        <option value="ARS">ARS</option>
+        <option value="AUD">AUD</option>
+        <option value="BGN">BGN</option>
+        <option value="BRL">BRL</option>
+        <option value="BSD">BSD</option>
+        <option value="CAD">CAD</option>
+        <option value="CHF">CHF</option>
+        <option value="CLP">CLP</option>
+        <option value="CNY">CNY</option>
+        <option value="COP">COP</option>
+        <option value="CZK">CZK</option>
+        <option value="DKK">DKK</option>
+        <option value="DOP">DOP</option>
+        <option value="EGP">EGP</option>
+        <option value="EUR">EUR</option>
+        <option value="FJD">FJD</option>
+        <option value="GBP">GBP</option>
+        <option value="GTQ">GTQ</option>
+        <option value="HKD">HKD</option>
+        <option value="HRK">HRK</option>
+        <option value="HUF">HUF</option>
+        <option value="IDR">IDR</option>
+        <option value="ILS">ILS</option>
+        <option value="INR" selected>INR</option>
+        <option value="ISK">ISK</option>
+        <option value="JPY">JPY</option>
+        <option value="KRW">KRW</option>
+        <option value="KZT">KZT</option>
+        <option value="MXN">MXN</option>
+        <option value="MYR">MYR</option>
+        <option value="NOK">NOK</option>
+        <option value="NZD">NZD</option>
+        <option value="PAB">PAB</option>
+        <option value="PEN">PEN</option>
+        <option value="PHP">PHP</option>
+        <option value="PKR">PKR</option>
+        <option value="PLN">PLN</option>
+        <option value="PYG">PYG</option>
+        <option value="RON">RON</option>
+        <option value="RUB">RUB</option>
+        <option value="SAR">SAR</option>
+        <option value="SEK">SEK</option>
+        <option value="SGD">SGD</option>
+        <option value="THB">THB</option>
+        <option value="TRY">TRY</option>
+        <option value="TWD">TWD</option>
+        <option value="UAH">UAH</option>
+        <option value="USD">USD</option>
+        <option value="UYU">UYU</option>
+        <option value="VND">VND</option>
+        <option value="ZAR">ZAR</option>
+    </select>
+    <br>
+    <div class="swap-rate">
+    <input id="input-one" class="btn" type="number" placeholder="0" value="1">
+        </div>
+        <button type="button" id="swap" value="Swap">Swap</button>
+        <div id="rate" class="rate"></div>
+    </div>
+    <select name="" id="currency-two">
+        <option value="AED">AED</option>
+<option value="ARS">ARS</option>
+<option value="AUD">AUD</option>
+<option value="BGN">BGN</option>
+<option value="BRL">BRL</option>
+<option value="BSD">BSD</option>
+<option value="CAD">CAD</option>
+<option value="CHF">CHF</option>
+<option value="CLP">CLP</option>
+<option value="CNY">CNY</option>
+<option value="COP">COP</option>
+<option value="CZK">CZK</option>
+<option value="DKK">DKK</option>
+<option value="DOP">DOP</option>
+<option value="EGP">EGP</option>
+<option value="EUR">EUR</option>
+<option value="FJD">FJD</option>
+<option value="GBP">GBP</option>
+<option value="GTQ">GTQ</option>
+<option value="HKD">HKD</option>
+<option value="HRK">HRK</option>
+<option value="HUF">HUF</option>
+<option value="IDR">IDR</option>
+<option value="ILS">ILS</option>
+<option value="INR" >INR</option>
+<option value="ISK">ISK</option>
+<option value="JPY">JPY</option>
+<option value="KRW">KRW</option>
+<option value="KZT">KZT</option>
+<option value="MXN">MXN</option>
+<option value="MYR">MYR</option>
+<option value="NOK">NOK</option>
+<option value="NZD">NZD</option>
+<option value="PAB">PAB</option>
+<option value="PEN">PEN</option>
+<option value="PHP">PHP</option>
+<option value="PKR">PKR</option>
+<option value="PLN">PLN</option>
+<option value="PYG">PYG</option>
+<option value="RON">RON</option>
+<option value="RUB">RUB</option>
+<option value="SAR">SAR</option>
+<option value="SEK">SEK</option>
+<option value="SGD">SGD</option>
+<option value="THB">THB</option>
+<option value="TRY">TRY</option>
+<option value="TWD">TWD</option>
+<option value="UAH">UAH</option>
+<option value="USD" selected>USD</option>
+<option value="UYU">UYU</option>
+<option value="VND">VND</option>
+<option value="ZAR">ZAR</option>
+</select>
+<br>
+<input type="number" class="btn" id="input-two" placeholder="0">
+</div>
+<script>
+const currencyOneSelect = document.getElementById("currency-one");
+const currencyTwoSelect = document.getElementById("currency-two");
+const inputOne = document.getElementById("input-one");
+const inputTwo = document.getElementById("input-two");
+const swapButton = document.getElementById("swap");
+const rateDisplay = document.getElementById("rate");
+
+function calculate() {
+    const selectedCurrencyOne = currencyOneSelect.value;
+    const selectedCurrencyTwo = currencyTwoSelect.value;
+    fetch(`https://api.exchangerate-api.com/v4/latest/${selectedCurrencyOne}`)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
+            const rate = data.rates[selectedCurrencyTwo];
+            rateDisplay.innerText = `1 ${selectedCurrencyOne} = ${rate} ${selectedCurrencyTwo}`;
+            inputTwo.value = (inputOne.value * rate).toFixed(2);
+        });
+}
+
+currencyOneSelect.addEventListener('change', calculate);
+inputOne.addEventListener('input', calculate);
+currencyTwoSelect.addEventListener('change', calculate);
+inputTwo.addEventListener('input', calculate);
+
+swapButton.addEventListener('click', function() {
+    const temp = currencyOneSelect.value;
+    currencyOneSelect.value = currencyTwoSelect.value;
+    currencyTwoSelect.value = temp;
+    calculate();
+});
+
+calculate();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #error{
+        color: brown;
+        font-size: 0.9em;
+    }
+    </style>
+</head>
+<body>
+    <!-- <input type="text" type="radio" name="gender" value="male">
+    <input type="text" type="radio" name="gender" value="female">
+    <input type="button" value="click" onclick="totalgender()"> -->
+    <!-- <h2>ram</h2>
+    <h2>sham</h2>
+    <h2>ram</h2>
+    <h3>ravi</h3>
+    <h3  >ravi</h3>
+    <h3 >ravi</h3>
+    <input type="button" value="count h2" onclick="num()"> -->
+    <!-- <input type="button" value="click" onclick="Test()"> -->
+    <!-- <div id="myid">this is my innerHTML content</div>
+    <button type="button" onclick="div()">click me</button> -->
+    <h2>contact form</h2>
+    <form  onsubmit="return validateForm()">
+    <label for="">name</label>
+    <input type="text" id="name" name="name" >
+    <div id="errorName" class="error">  
+    </div>
+    <label for="">email</label>
+    <input type="text" id="email" name="name" >
+    <div id="errorEmail" class="error">  
+    </div>
+    <button type="button">submit</button>
+</form>
+    <script>
+    // function totalgender(){
+    // var allgender = document.getElementsByClassName("gender").value;
+    // alert("total gender"+allgender.length);
+    // }
+
+    // function num(){
+    // var a1 = document.getElementsByTagName("h2");
+    // alert("totalh2tags"+a1.length)
+    // }
+    // function num1(){
+    // var a2 = document.getElementsByTagName("h3");
+    // alert("totalh3tags"+a2.length)
+    // }
+
+    // function affortIt(price, taxrate, Balance){
+    // var total = price + price * taxrate;
+    // if (total <= Balance) {
+    //     alert("yes")
+    // }else{
+    //     alert("no")
+    // }
+    // }
+
+//     function Test()
+// {
+// var letterP = prompt("Please enter the letter p"," ");
+// while (letterP!=="p")
+// {
+// letterP = prompt("No dummy! Enter the letter p","");
+// }
+// alert("Thank you!")
+// }
+
+// function div(){
+//     document.getElementById("myid").innerText = "Shriram Mithe";
+// }
+function validateForm(){
+        document.getElementById("errorName").innerText = "";
+        document.getElementById("errorEmail").innerText = "";
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var isvalid = true;
+        if (name.trim() == "") {
+            document.getElementById("errorName").innerText = "name is required";
+            isvalid = false
+        }
+        if (name.trim() == "") {
+            document.getElementById("errorEmail").innerText = "email is required";
+            isvalid = false
+        }else if(!validateemail(email)){
+            document.getElementById("errorEmail").innerText = "name is required"
+            isvalid = false;
+        }
+        return isvalid;
+        // Helper function to validate email format
+      function validateEmail(email) {
+        var re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(email);
+      }
+}
+</script>
+</body>
+</html>

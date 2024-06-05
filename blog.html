@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-left h1 {
+    margin: 0;
+    color: orange;
+}
+
+.navbar-left .icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+}
+
+.navbar-center {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+.navbar-center a:hover{
+    color: orange;
+}
+
+.navbar-right .icon {
+    margin-left: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover a {
+    background-color: #ddd;
+}
+
+.fas {
+    margin-left: 15px;
+}
+.navbar-left{
+    display: flex;
+}
+.main{
+    background-image: url(https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?cs=srgb&dl=pexels-julias-torten-und-tortchen-434418-1179002.jpg&fm=jpg);
+    height: 500px;
+    width: 600px;
+    margin: 70px;
+    margin-right: 10px;
+    background-position: center;
+    background-size: cover;
+}
+.main1{
+    background-image: url(https://domesticgothess.com/wp-content/uploads/2018/10/vegan-cupcakes.jpg);
+    height: 240px;
+    width: 400px;
+    margin: 70px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-position: center;
+    background-size: cover;
+}
+.main2{
+    background-image: url(https://s3.amazonaws.com/static.realcaliforniamilk.com/media/recipes_2/cherry-chocolate-cookies.jpg);
+    height: 240px;
+    width: 400px;
+    margin: 70px;
+    margin-left: 20px;
+    margin-top: 0px;
+    background-position: center;
+    background-size: cover;
+}
+.main4{
+    display: flex;
+}
+.main input{
+    margin-top: 50%;
+    margin-left: 20px;
+    padding: 10px 30px;
+    border-radius: 13px;
+    background-color: #f7cd7e;
+    border: none;
+    font-weight: bold;
+}
+.main h1{
+    color: #ffffff;
+    line-height: 25px;
+    margin-left: 20px;
+    font-size: 30px;
+}
+.main p{
+    color: #ffffff;
+    margin-left: 20px;
+}
+.main1 h2{
+    padding-top: 100px;
+    margin: 10px;
+    color: #ffffff;
+}
+.main1 input{
+    margin-left: 90px;
+    padding: 10px 30px;
+    border-radius: 13px;
+    background-color: #f7cd7e;
+    border: none;
+    font-weight: bold;
+}
+.main2 h2{
+    padding-top: 100px;
+    margin: 10px;
+    color: #ffffff;
+}
+.main2 input{
+    margin-left: 90px;
+    padding: 10px 30px;
+    border-radius: 13px;
+    background-color: #d99820;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+.add{
+    text-align: center;
+}
+.add img{
+    width: 70%;
+    height: 150px;
+}
+.rec0 img{
+    width: 250px;
+}
+.rec0{
+    display: flex;
+    
+}
+.rec0 p{
+    color: #908572;
+}
+.rec{
+    margin: 50px;
+
+}
+.rec2{
+    margin-left: 70px;
+}
+.rec3{
+    margin-left: 70px;
+}
+.a1 img{
+    width: 250px;
+}
+.a1{
+    display: flex;
+}
+.a{
+    margin: 50px;
+}
+.a p{
+    color: #009dff;
+}
+.a3{
+    margin-left: 50px;
+}
+.a4{
+    margin-left: 50px;
+}
+.a5{
+    margin-left: 50px;
+}
+.container {
+            width: 80%;
+            height: 200px;
+            background-color: #f0ebeb;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: 100px;
+            box-sizing: border-box;
+        }
+        .left {
+            flex: 1;
+        }
+        .left h2 {
+            margin: 0 0 10px 0;
+        }
+        .left p {
+            margin: 5px 0;
+        }
+        .right {
+            width: 60%;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .right input[type="text"] {
+            width: 97%;
+            padding: 10px;
+            padding-right: 40px; /* Make space for the icon */
+            box-sizing: border-box;
+            height: 40px;
+        }
+        .right .search-icon {
+            position: absolute;
+            right: 10px;
+            width: 40px;
+            height: 40px;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .foot1 img{
+            width: 50px;
+            border-radius: 50%;
+        }
+        .foot1{
+            color: #ffffff;
+            text-align: center;
+            padding-top: 80px;
+            align-items: center;
+        }
+        .foot{
+            background-color: #030a0b;
+            height: 400px;
+        }
+        .foot1 p{
+            color: #89979a;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-left">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZFbmz1dsMQ1sxbzxIcAveTpbx8ztZnAlXg&s" alt="Bell Icon" class="icon">
+            <h1>Blog Website</h1>
+        </div>
+        <div class="navbar-center">
+            <a style="color: orange;" href="#">Home</a>
+            <a href="#">About</a>
+            <div class="dropdown">
+                <a href="#">Blog <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Blog 1</a>
+                    <a href="#">Blog 2</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <a href="#">Pages <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#">Page 1</a>
+                    <a href="#">Page 2</a>
+                </div>
+            </div>
+        </div>
+        <div class="navbar-right">
+            <i class="fas fa-search icon"></i>
+            <i class="fas fa-moon icon"></i>
+        </div>
+    </nav>
+    <div class="main4">
+    <div class="main">
+    <input type="button" value="Cupcakes">
+    <h1>Amazing Milk Choklate Cupcake With Buttercream</h1>
+    <p>Lorem eaque repudiandae alias, corrupti cumque doloremque cupiditate earum quo.</p>
+
+    </div>
+    <div class="main3">
+    <div class="main1">
+        <h2>Amazing milk chocklate cupcake with cream</h2>
+        <input type="button" value="10 Mini Cake">
+    </div>
+    <div class="main2">
+        <h2>The best cherry chocklate cheap coockies recipe</h2>
+        <input type="button" value="Cherry Creams">
+    </div>
+</div>
+</div>
+<div class="add">
+    <p>Adevertisement</p>
+    <img src="https://www.yummytoddlerfood.com/wp-content/uploads/2020/01/chocolate-cupcakes-with-strawberry-hearts.jpg" alt="">
+</div>
+<div class="rec">
+    <h2>Latest Recipes</h2>
+    <div class="rec0">
+    <div class="rec1">
+        <img style="width: 300px;" src="https://www.sidechef.com/recipe/3883dffb-5fa2-4ee9-8054-d8de1409899f.jpg" alt="">
+        <h3>The best cookies recipe to <br> bake This weekend</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Incidunt, quas perspiciatis.</p>
+    </div>
+    <div class="rec2">
+        <img style="width: 300px; height: 223px;" src="https://i.ytimg.com/vi/6X-z0JaaSgM/maxresdefault.jpg" alt="">
+        <h3>Mixed Greens With Straberry <br> juice  vinagrette recipes</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Incidunt, quas perspiciatis.</p>
+    </div>
+    <div class="rec3">
+        <img style="width: 300px; height: 223px;" src="https://media.istockphoto.com/id/468115492/photo/bhelpuri-chat-food-india.jpg?s=612x612&w=0&k=20&c=NzYBl0jsri7W1d7j0lvzPkYT4KFeujYRWyQqD3G76_o=" alt="">
+        <h3>The best cookies recipe to bake <br> This weekend</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, <br> adipisicing elit. Incidunt, quas perspiciatis.</p>
+    </div>
+</div>
+</div>
+<div class="a">
+    <h3>20-Minutes Meals</h3>
+    <div class="a1">
+        <div class="a2">
+            <img style="height: 168px;" src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1-500x375.jpg" alt="">
+            <h3>How to cook french fries <br> like in a restraunt</h3>
+            <p>$13.00</p>
+        </div>
+        <div class="a3">
+            <img style="height: 168px;" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+            <h3>Sicy nooodels with north <br> indian style</h3>
+            <p>$10.00</p>
+        </div>
+        <div class="a4">
+            <img src="https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="">
+            <h3>Eat Healthy Delicous and <br> perfect  burger</h3>
+            <p>$13.00</p>
+        </div>
+        <div class="a5">
+            <img src="https://www.fourgrandmere.com/modules/psblog/uploads/1643296375.jpg" alt="">
+            <h3>How to cook pizza like in a <br> restraunt</h3>
+            <p>$16.00</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="left">
+        <h2 style="font-size: 29px; color: #000000;">Search Newsletter</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+    <div class="right">
+        <div class="search-icon">🔍</div>
+        <input type="text" placeholder="Search today's deals">
+    </div>
+</div>
+<div class="a">
+    <h3>20-Minutes Meals</h3>
+    <div class="a1">
+        <div class="a2">
+            <img style="height: 168px;" src="https://thissillygirlskitchen.com/wp-content/uploads/2020/02/homemade-french-fries-8-1-500x375.jpg" alt="">
+            <h3>How to cook french fries <br> like in a restraunt</h3>
+            <p>$13.00</p>
+        </div>
+        <div class="a3">
+            <img style="height: 168px;" src="https://images.unsplash.com/photo-1585032226651-759b368d7246?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8bm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D" alt="">
+            <h3>Sicy nooodels with north <br> indian style</h3>
+            <p>$10.00</p>
+        </div>
+        <div class="a4">
+            <img src="https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="">
+            <h3>Eat Healthy Delicous and <br> perfect  burger</h3>
+            <p>$13.00</p>
+        </div>
+        <div class="a5">
+            <img src="https://www.fourgrandmere.com/modules/psblog/uploads/1643296375.jpg" alt="">
+            <h3>How to cook pizza like in a <br> restraunt</h3>
+            <p>$16.00</p>
+        </div>
+    </div>
+</div>
+<div class="foot">
+    <div class="foot1">
+        <a style="font-size: 25px; margin-left: 5px; text-decoration: none; color: #ffffff;" href=""><img style=" width: 20px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSZFbmz1dsMQ1sxbzxIcAveTpbx8ztZnAlXg&s" alt="">Blog Store</a>
+        <p style="margin-bottom: 80px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolores, <br> exercitationem maiores. Voluptatem, veritatis officiis quae vero nisi assumenda odit earum.</p>
+        <img style="width: 36px;" src="https://cdn-icons-png.flaticon.com/512/124/124021.png" alt="">
+        <img style="margin-left: 7px; width: 36px;" src="https://static-00.iconduck.com/assets.00/facebook-icon-2048x2048-3ss3dgti.png" alt="">
+        <img style="margin-left: 7px; width: 36px;"  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWQmKvZzM7NeNuWl3SCSdzWEeBjt9yzUiPlg&s" alt="">
+        <img style="margin-left: 7px; width: 36px;"  src="https://cdn5.vectorstock.com/i/1000x1000/37/04/food-delivery-icon-image-vector-16143704.jpg" alt="">
+        <p>@2002 Copyright <b style="color: white;"> FoodblogWebsite</b>.pvt Ltd</p>
+    </div>
+</div>
+</body>
+</html>
